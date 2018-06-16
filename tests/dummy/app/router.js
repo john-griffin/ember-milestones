@@ -8,6 +8,15 @@ const Router = EmberRouter.extend({
 
 Router.map(function() {
   this.route('loop');
+
+  this.route('docs', function() {
+    this.route('usage');
+    this.route('configuration');
+    this.route('but-wait');
+    this.route('api', function() {
+      this.route('item', { path: '/*path' });
+    });
+  });
 });
 
 export default Router;

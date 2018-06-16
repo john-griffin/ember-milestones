@@ -1,0 +1,22 @@
+    {{#docs-viewer as |viewer|}}
+
+      {{#viewer.nav as |nav|}}
+        {{nav.section 'Guides' style='large'}}
+
+        <div class="mb-8"></div>
+
+        {{nav.item 'Introduction' 'docs.index'}}
+        {{nav.item 'Usage' 'docs.usage'}}
+        {{nav.item 'Configuration' 'docs.configuration'}}
+        {{nav.item 'But Wait' 'docs.but-wait'}}
+      {{/viewer.nav}}
+
+      {{#viewer.main}}
+        <div class="docs-container">
+          <div class="docs-section">
+            {{outlet}}
+          </div>
+        </div>
+      {{/viewer.main}}
+
+    {{/docs-viewer}}
